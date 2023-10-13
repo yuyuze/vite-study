@@ -1,7 +1,8 @@
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import viteBaseConfig from './build/vite.base.config';
 import viteDevConfig from './build/vite.dev.config';
 import viteProdConfig from './build/vite.prod.config';
+// import viteTestConfig from './build/vite.test.config';
 
 // 策略模式
 const envResolve = {
@@ -11,11 +12,14 @@ const envResolve = {
   },
   serve: () => {
     console.log('开发环境');
-    return { ...viteDevConfig, ...viteDevConfig };
+    return { ...viteBaseConfig, ...viteDevConfig };
   },
 };
-export default defineConfig(({ command }) => {
+// mode是script命令来的  --mode xxxx mode=xxxx
+export default defineConfig(({ command, mode }) => {
   // console.log('process', process.env.VITE_APP_KEY);
+  const env = loadEnv(mode, process.cwd(), '');
+  console.log('env', env, command);
   return envResolve[command]();
 });
 

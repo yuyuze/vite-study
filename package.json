@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
+    "prepublish": "vite --mode prepublish",
     "build": "vite build"
   },
   "author": "",
