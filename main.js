@@ -12,3 +12,4 @@ import _ from 'lodash';
 import lodash from 'lodash-es';
 console.log('lodash', import.meta.env.VITE_APP_KEY);
 console.log('counter', counter);
+console.log(123);
