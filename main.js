@@ -1,4 +1,9 @@
 import { counter } from './counter.js';
+import styles from './index.module.less';
+import './index.css';
+import './componentA';
+
+console.log('styles', styles);
 /**
  * 依赖预构建的为了解决vite识别不了commonjs规范格式，只识别esmodule，需要与构建到nodemodule的.vite中
  * 依赖预构建
