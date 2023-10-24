@@ -1,0 +1,12 @@
+:root {
+  --globalColor: blueviolet;
+}
+
+$bgSize: 24px;
+body {
+  background-color: blueviolet;
+  background-color: var(--globalColor);
+}
+body .main {
+  font-size: $bgSize;
+}

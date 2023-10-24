@@ -1,5 +1,6 @@
 .footer {
   width: 200px;
   height: 200px;
-  background-color: aqua;
+  background-color: var(--globalColor);
+  user-select: none;
 }

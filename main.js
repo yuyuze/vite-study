@@ -1,7 +1,9 @@
+import './varible.css';
 import { counter } from './counter.js';
 import styles from './index.module.less';
 import './index.css';
 import './componentA';
+import './src/index';
 
 console.log('styles', styles);
 /**

@@ -11,6 +11,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "postcss-custom-properties": "^12",
+    "postcss-preset-env": "^9.2.0",
     "vite": "^4.4.11"
   },
   "dependencies": {
