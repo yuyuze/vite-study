@@ -3,6 +3,7 @@ import postcssPresetEnv from 'postcss-preset-env';
 const path = require('path');
 
 export default defineConfig({
+  base: './',
   css: {
     modules: {
       // localsConvention: 'camelCase', // 生成key的规则 驼峰
@@ -38,5 +39,19 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
       '@assets': path.resolve(__dirname, './src/assets'),
     },
+  },
+  build: {
+    rollupOptions: {
+      // asset静态文件
+      // 配置rollup的一些构建策略
+      output: {
+        // 在rollup里面，hash代表将你的文件名和文件内容进行组合计算得来的结果 文件名称命名规范
+        // js认为是脚本
+        assetFileNames: '[hash].[name].[ext]',
+      },
+    },
+    assetsInlineLimit: 4096, // 小于4kb会转化为base64格式
+    outDir: 'testDist', //打包后的文件名
+    assetsDir: 'static', // 静态资源文件名称
   },
 });
