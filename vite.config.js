@@ -19,7 +19,6 @@ const envResolve = {
 export default defineConfig(({ command, mode }) => {
   // console.log('process', process.env.VITE_APP_KEY);
   const env = loadEnv(mode, process.cwd(), '');
-  console.log('env', env, command);
   return envResolve[command]();
 });
 

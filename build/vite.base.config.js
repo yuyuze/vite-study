@@ -1,9 +1,34 @@
 import { defineConfig } from 'vite';
 import postcssPresetEnv from 'postcss-preset-env';
+import { ViteAliases } from 'vite-aliases';
+import MyPlugin from '../plugins/ViteAliases';
+// import { createHtmlPlugin } from 'vite-plugin-html';
+import createHtmlPlugin from '../plugins/CreatePluginHtml';
 const path = require('path');
 
 export default defineConfig({
   base: './',
+  root: './',
+  // ViteAliases(),
+  plugins: [
+    MyPlugin(),
+    createHtmlPlugin({
+      minify: true,
+      inject: {
+        data: {
+          title: '首页',
+        },
+      },
+    }),
+    // createHtmlPlugin({
+    //   minify: true,
+    //   inject: {
+    //     data: {
+    //       title: '首页',
+    //     },
+    //   },
+    // }),
+  ],
   css: {
     modules: {
       // localsConvention: 'camelCase', // 生成key的规则 驼峰
@@ -35,10 +60,10 @@ export default defineConfig({
     // },
   },
   resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-      '@assets': path.resolve(__dirname, './src/assets'),
-    },
+    // alias: {
+    //   '@': path.resolve(__dirname, './src'),
+    //   '@assets': path.resolve(__dirname, './src/assets'),
+    // },
   },
   build: {
     rollupOptions: {
@@ -53,5 +78,6 @@ export default defineConfig({
     assetsInlineLimit: 4096, // 小于4kb会转化为base64格式
     outDir: 'testDist', //打包后的文件名
     assetsDir: 'static', // 静态资源文件名称
+    emptyOutDir: true, // 清除输出目录中的所有文件
   },
 });
