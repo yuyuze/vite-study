@@ -4,6 +4,8 @@ import { ViteAliases } from 'vite-aliases';
 import MyPlugin from '../plugins/ViteAliases';
 // import { createHtmlPlugin } from 'vite-plugin-html';
 import createHtmlPlugin from '../plugins/CreatePluginHtml';
+// import { viteMockServe } from 'vite-plugin-mock';
+import VitePluginMock from '../plugins/VitePluginMock';
 const path = require('path');
 
 export default defineConfig({
@@ -20,6 +22,9 @@ export default defineConfig({
         },
       },
     }),
+    VitePluginMock(),
+    // 会自动找根目录的mock文件
+    // viteMockServe({}),
     // createHtmlPlugin({
     //   minify: true,
     //   inject: {

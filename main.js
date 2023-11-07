@@ -20,3 +20,13 @@ import _ from 'lodash';
 import lodash from 'lodash-es';
 console.log('lodash', import.meta.env.VITE_APP_KEY);
 console.log('counter', counter);
+fetch('/api/users', {
+  method: 'POST',
+  body: JSON.stringify({
+    name: 123,
+  }),
+});
+
+fetch('/api/userInfo', {
+  method: 'GET',
+});

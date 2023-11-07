@@ -49,3 +49,24 @@ createHtmlPlugin({
 # vite 常用插件之 vite-plugin-mock
 
 用来模拟数据
+
+1. 简单方式: 直接去写死一两个数据 方便调试
+
+- 缺陷
+  - 没法做海量数据测试
+  - 没法获得一些标准数据
+  - 没法去感知 http 得异常
+
+2. mockjs： 模拟海量数据的，vite-plugin-mock 的依赖项就是 mockjs
+
+```js
+ npm i vite-plugin-mock mockjs -D
+```
+
+手写 vite-plugin-mock
+
+# 目前学的声明周期函数
+
+- config 添加 vite 的配置
+- configureServer 拦截 vite 服务器请求来对它做操作
+- transformIndexHtml 在 html 模板请求之前对模板进行处理

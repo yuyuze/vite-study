@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "mockjs": "^1.1.0",
     "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
     "postcss-custom-properties": "^12",
