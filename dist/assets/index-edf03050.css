@@ -1,0 +1,33 @@
+
+.content_0ra7 .main_3j82 {
+  background-color: aquamarine;
+}
+.main_pns1 {
+  font-size: 18px;
+  margin: 25px;
+  padding: 25px;
+  background-color: green;
+}
+body {
+  background-color: green;
+  /* 30% 最小100px 最大200px */
+  width: max(100px, min(30%, 200px));
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  /* filter: blur(100px); */
+}
+body .main {
+    font-size: 24px;
+  }
+body .main:has(.nav) {
+    font-size: 12px;
+  }
+.footer_2t6d {
+  width: 200px;
+  height: 200px;
+  background-color: blueviolet;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}

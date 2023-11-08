@@ -1,6 +1,6 @@
 body {
   background-color: green;
-  filter: blur(100px);
+  /* filter: blur(100px); */
   /* 30% 最小100px 最大200px */
   width: clamp(100px, 30%, 200px);
   user-select: none;

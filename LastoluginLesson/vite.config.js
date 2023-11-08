@@ -43,3 +43,7 @@ module.exports = defineConfig({
     },
   ],
 });
+
+// federation 联邦
+
+// 两个项目，允许引入另一个项目的内容

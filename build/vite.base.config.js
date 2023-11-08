@@ -6,6 +6,8 @@ import MyPlugin from '../plugins/ViteAliases';
 import createHtmlPlugin from '../plugins/CreatePluginHtml';
 // import { viteMockServe } from 'vite-plugin-mock';
 import VitePluginMock from '../plugins/VitePluginMock';
+import checker from 'vite-plugin-checker';
+
 const path = require('path');
 
 export default defineConfig({
@@ -33,6 +35,9 @@ export default defineConfig({
     //     },
     //   },
     // }),
+    checker({
+      typescript: true,
+    }),
   ],
   css: {
     modules: {

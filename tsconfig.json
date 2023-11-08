@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "skipLibCheck": true, // 是否跳过node_modules目录检查
+    "module": "esnext",
+    "lib": [
+      "ES2015",
+      "DOM"
+    ]
+  }
+}

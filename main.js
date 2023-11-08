@@ -18,6 +18,7 @@ console.log('styles', styles);
  */
 import _ from 'lodash';
 import lodash from 'lodash-es';
+import './index';
 console.log('lodash', import.meta.env.VITE_APP_KEY);
 console.log('counter', counter);
 fetch('/api/users', {

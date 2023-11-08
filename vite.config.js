@@ -2,6 +2,7 @@ import { defineConfig, loadEnv } from 'vite';
 import viteBaseConfig from './build/vite.base.config';
 import viteDevConfig from './build/vite.dev.config';
 import viteProdConfig from './build/vite.prod.config';
+import checker from 'vite-plugin-checker';
 // import viteTestConfig from './build/vite.test.config';
 
 // 策略模式
