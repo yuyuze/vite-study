@@ -77,6 +77,10 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
+      input: {
+        main: path.resolve(process.cwd(), './index.html'),
+        product: path.resolve(process.cwd(), './src/product.html'),
+      },
       // asset静态文件
       // 配置rollup的一些构建策略
       output: {

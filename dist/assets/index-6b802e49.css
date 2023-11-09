@@ -1,8 +1,8 @@
 
-.content_0ra7 .main_3j82 {
+.content_bca6 .main_vtej {
   background-color: aquamarine;
 }
-.main_pns1 {
+.main_fyld {
   font-size: 18px;
   margin: 25px;
   padding: 25px;
@@ -23,7 +23,7 @@ body .main {
 body .main:has(.nav) {
     font-size: 12px;
   }
-.footer_2t6d {
+.footer_x5bh {
   width: 200px;
   height: 200px;
   background-color: blueviolet;
