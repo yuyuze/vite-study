@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import viteCompression from 'vite-plugin-compression';
 import path from 'path';
 
 export default defineConfig({

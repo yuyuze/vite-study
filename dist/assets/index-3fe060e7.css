@@ -1,8 +1,8 @@
 
-.content_bca6 .main_vtej {
+.content_5ndo .main_so14 {
   background-color: aquamarine;
 }
-.main_fyld {
+.main_veaj {
   font-size: 18px;
   margin: 25px;
   padding: 25px;
@@ -23,7 +23,7 @@ body .main {
 body .main:has(.nav) {
     font-size: 12px;
   }
-.footer_x5bh {
+.footer_x4x4 {
   width: 200px;
   height: 200px;
   background-color: blueviolet;

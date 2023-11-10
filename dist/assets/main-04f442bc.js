@@ -1,16 +1,15 @@
 import "./modulepreload-polyfill-7faf532e.js";
-import { l as lodashExports } from "./vendor-d8bc076d.js";
 const varible = "";
 const counter = 1;
 console.log(123);
-const content = "content_bca6";
-const main = "main_vtej main_fyld";
+const content = "content_5ndo";
+const main = "main_so14 main_veaj";
 const styles$1 = {
   content,
   main
 };
 const index = "";
-const footer = "footer_x5bh";
+const footer = "footer_x4x4";
 const styles = {
   footer
 };
@@ -25,7 +24,7 @@ const txt = {
 };
 console.log("txt", txt);
 const mainArr = [];
-lodashExports.forEach(mainArr, function(elm) {
+_.forEach(mainArr, function(elm) {
   console.log("elm", elm);
 });
 console.log("styles", styles$1);

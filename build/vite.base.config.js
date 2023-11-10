@@ -7,8 +7,9 @@ import createHtmlPlugin from '../plugins/CreatePluginHtml';
 // import { viteMockServe } from 'vite-plugin-mock';
 import VitePluginMock from '../plugins/VitePluginMock';
 import checker from 'vite-plugin-checker';
-
+import viteCompression from 'vite-plugin-compression';
 const path = require('path');
+import viteCDNPlugin from 'vite-plugin-cdn-import';
 
 export default defineConfig({
   base: './',
@@ -37,6 +38,19 @@ export default defineConfig({
     // }),
     checker({
       typescript: true,
+    }),
+    viteCompression(),
+    viteCDNPlugin({
+      modules: [
+        {
+          // 包名
+          name: 'lodash',
+          // 全局导出变量
+          var: '_',
+          // cdn地址
+          path: 'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js',
+        },
+      ],
     }),
   ],
   css: {
@@ -93,5 +107,26 @@ export default defineConfig({
     outDir: 'testDist', //打包后的文件名
     assetsDir: 'static', // 静态资源文件名称
     emptyOutDir: true, // 清除输出目录中的所有文件
+  },
+  server: {
+    // 开发服务器配置
+    proxy: {
+      //配置跨域的解决方案
+      // key + 描述对象 在遇到/api开头的请求时 都将他代理到 target地址去
+      // vite发现这个path 有配置过跨域代理策略 然后它会根据策略的描述对象 进行再次请求
+      // rewrite是否要重写请求地址
+      // https://www.360.com/api去地址截取
+
+      // 最后是服务器请求服务器就没有同源策略了
+
+      // 生产环境没有用了要交给后端去处理跨域
+
+      // 或者配置身份标记（access-control-allow-origin：代表哪些域是我的朋友）
+      '/api': {
+        target: 'https://www.360.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
   },
 });
